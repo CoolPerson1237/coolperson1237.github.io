@@ -2,10 +2,36 @@
 <html>
   <head>
     <script src = "otherstuff.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
   
 <body>
   <div id = "about"> im so cool </div>
+
+  <canvas id="CamIntel" style="width:100%;max-width:700px"></canvas>
+<script>
+  const xVal = [50,1,20,40];
+  const yVal = [1,10,20,40];
+  const myChart = new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xVal,
+    datasets: [{
+    lineTensions: 0,
+    backgroundColor: "rgba(0,0,255,1.0)",
+      data: yVal
+      
+  }]
+    options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+  },
+  options: {}
+});
+</script>
   
 </body>
   
