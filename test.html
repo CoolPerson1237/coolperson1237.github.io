@@ -9,30 +9,29 @@
 <body>
   <div id = "about"> im so cool </div>
 
-  <canvas id="CamIntel" style="width:100%;max-width:600"></canvas>
+  <canvas id="myChart" style="width:100%;max-width:600"></canvas>
 <script>
-  const xVal = [50,1,20,40];
-  const yVal = [1,10,20,40];
-  new Chart("CamIntel", {
+const xValues = [50,60,70,80,90,100,110,120,130,140,150];
+const yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+new Chart("myChart", {
   type: "line",
   data: {
-    labels: xVal,
+    labels: xValues,
     datasets: [{
-    fill: false,
-    lineTension: 0,
-    backgroundColor: "rgba(0,0,255,1.0)",
-    borderColor: "rgba(0,0,255,0.1)",
-      data: yVal
-  }]
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
   },
-    options: {
+  options: {
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 6, max:16}}],
     }
   }
-  },
-  options: {}
 });
 </script>
   
