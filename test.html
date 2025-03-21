@@ -8,21 +8,20 @@
 <body>
   <div id = "about"> im so cool </div>
 
-  <canvas id="CamIntel" style="width:100%;max-width:700px"></canvas>
+  <canvas id="CamIntel" style="width:100%;max-width:600"></canvas>
 <script>
   const xVal = [50,1,20,40];
   const yVal = [1,10,20,40];
-  const CamIntel = new Chart("CamIntel", {
+  new Chart("CamIntel", {
   type: "line",
   data: {
     labels: xVal,
     datasets: [{
     fill: false,
-    lineTensions: 0,
-    borderColor: "rgba(0,0,255,0.1)",
+    lineTension: 0,
     backgroundColor: "rgba(0,0,255,1.0)",
+    borderColor: "rgba(0,0,255,0.1)",
       data: yVal
-      
   }]
     options: {
     legend: {display: false},
