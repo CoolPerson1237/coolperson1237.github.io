@@ -1,4 +1,4 @@
-##nothing
+document.getElementById('eddie').textContent = 'help.';
 function please(){
   document.getElementById('content').textContent = 'This text is added by JavaScript.';
 }
